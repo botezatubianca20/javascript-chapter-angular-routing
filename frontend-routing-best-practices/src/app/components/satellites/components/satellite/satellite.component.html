@@ -1,0 +1,31 @@
+<ng-container>
+
+    <div class="satellite">
+
+        <h2>{{satellite.description}}</h2>
+
+        <h4>{{satellite.longDescription}}</h4>
+
+
+        <div class="satellite-img">
+            <img *ngIf="satellite" class="satellite-thumbnail" [src]="satellite.iconUrl">
+        </div>
+
+
+        <router-outlet></router-outlet>
+
+    </div>
+
+
+
+</ng-container>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+<div class="equipments-list">
+    <h3>Equipments</h3>
+
+    <table class="equipments-table mat-elevation-z7" *ngIf="equipments">
+
+    <thead>
+
+    <th>ID</th>
+    <th>Description</th>
+
+    </thead>
+
+    <tr class="equipment-row" *ngFor="let equipment of equipments" [routerLink]="['equipments', equipment.id]">
+        <td class="id-cell">{{equipment.id}}</td>
+        <td class="description-cell">{{equipment.description}}</td>
+    </tr>
+
+    </table>
+</div>
+

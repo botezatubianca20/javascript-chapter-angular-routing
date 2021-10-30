@@ -1,0 +1,24 @@
+<div class="cards">
+
+    <mat-card *ngFor="let satellite of satellites"
+          class="satellite-card mat-elevation-z10"
+          [routerLink]="satellite.url">
+
+    <mat-card-header>
+
+        <mat-card-title>{{satellite.description}}</mat-card-title>
+
+    </mat-card-header>
+
+    <img mat-card-image class="img" [src]="satellite.iconUrl">
+
+    <mat-card-content>
+        <p>{{satellite.longDescription}}</p>
+    </mat-card-content>
+
+
+</mat-card>
+
+</div>
+
+

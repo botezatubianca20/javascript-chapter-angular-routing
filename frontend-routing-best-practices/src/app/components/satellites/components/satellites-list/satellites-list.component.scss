@@ -1,0 +1,12 @@
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+}
+
+.satellite-card {
+    margin: 20px 10px;
+    max-width: 400px;
+    cursor: pointer;
+}
