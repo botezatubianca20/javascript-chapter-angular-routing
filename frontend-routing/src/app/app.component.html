@@ -5,43 +5,37 @@
     <div class="toolbar-tools">
 
       <div>
-          <a class="menu-item" mat-button routerLink="/satellites" routerLinkActive="menu-item-active">
-            <span>Satellites</span>
-          </a>
+        <a class="menu-item" mat-button routerLink="/satellites" routerLinkActive="menu-item-active">
+          <span>Satellites</span>
+        </a>
 
-          <a class="menu-item" mat-button routerLink="/about" routerLinkActive="menu-item-active">
-            <span>About</span>
-          </a>
+        <a class="menu-item" mat-button routerLink="/about" routerLinkActive="menu-item-active">
+          <span>About</span>
+        </a>
 
-          <a class="menu-item" mat-button routerLink="/admin" routerLinkActive="menu-item-active">
-            <span>Admin</span>
-          </a>
-
-
-          <a mat-button class="menu-item" routerLink="/login" routerLinkActive="menu-item-active"  *ngIf="authService.isLoggedOut$ | async">
-            <span>Login</span>
-          </a>
+        <a class="menu-item" mat-button routerLink="/admin" routerLinkActive="menu-item-active"
+          *ngIf="authService.isAdmin$ | async">
+          <span>Admin</span>
+        </a>
 
 
-          <a mat-button class="menu-item" (click)="logout()" *ngIf="authService.isLoggedIn$ | async">
-            <span>Logout</span>
-          </a>
+        <a mat-button class="menu-item" routerLink="/login" routerLinkActive="menu-item-active"
+          *ngIf="authService.isLoggedOut$ | async">
+          <span>Login</span>
+        </a>
+
+
+        <a mat-button class="menu-item" (click)="logout()" *ngIf="authService.isLoggedIn$ | async">
+          <span>Logout</span>
+        </a>
       </div>
 
 
 
     </div>
-
-
-
-
   </mat-toolbar>
 
-  <!-- <messages></messages> -->
-
-  <!-- <loading [detectRoutingOngoing]="true"></loading> -->
 
   <router-outlet></router-outlet>
 
 </mat-sidenav-container>
-

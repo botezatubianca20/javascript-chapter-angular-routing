@@ -14,20 +14,20 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: "satellites",
-    loadChildren: () => import('./components/satellites/satellites.module').then(module => module.SatellitesModule),
-    // canLoad: [CanLoadAuthGuard], 
-    // canActivate: [AuthGuard], 
+    path: "admin",
+    loadChildren: () => import('./components/admin/admin.module').then(module => module.AdminModule),
+    canActivate: [AdminGuard],
     data: {
-      preload: true
+      preload: false
     }
   },
   {
-    path: "admin",
-    loadChildren: () => import('./components/admin/admin.module').then(module => module.AdminModule),
-    canActivate: [AdminGuard], 
+    path: "satellites",
+    loadChildren: () => import('./components/satellites/satellites.module').then(module => module.SatellitesModule),
+    // canLoad: [CanLoadAuthGuard],
+    // canActivate: [AuthGuard],
     data: {
-      preload: false
+      preload: true
     }
   },
   {

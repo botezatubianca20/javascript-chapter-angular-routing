@@ -19,14 +19,19 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
+    path: "admin",
+    component: AdminComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: "satellites",
     component: SatellitesListComponent,
   },
   {
     path: "satellites/:satelliteUrl",
     component: SatelliteComponent,
-    canActivate: [AuthGuard], 
-    canActivateChild: [AuthGuard], 
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
     resolve: {
       satellite: SatelliteResolver
     },
@@ -55,11 +60,6 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginComponent
-  },
-  {
-    path: "admin",
-    component: AdminComponent,
-    canActivate: [AuthGuard]
   },
 ];
 
