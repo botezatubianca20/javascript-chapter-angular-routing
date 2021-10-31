@@ -15,6 +15,8 @@ export class SatelliteComponent implements OnInit {
 
   ngOnInit(): void {
     this.satellite = this.route.snapshot.data["satellite"];
+
+    console.log("this.satellite ", this.satellite)
   }
 
 }

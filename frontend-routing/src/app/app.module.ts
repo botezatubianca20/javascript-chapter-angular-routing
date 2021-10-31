@@ -23,6 +23,7 @@ import { SatellitesListComponent } from './components/satellites-list/satellites
 import { EquipmentListComponent } from './components/equipment-list/equipment-list.component';
 import { SatelliteComponent } from './components/satellite/satellite.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AdminComponent } from './components/admin/admin.component';
     EquipmentListComponent,
     SatelliteComponent,
     AdminComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

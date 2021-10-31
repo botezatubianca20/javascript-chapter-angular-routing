@@ -5,6 +5,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { EquipmentListComponent } from './components/equipment-list/equipment-list.component';
 import { EquipmentComponent } from './components/equipment/equipment.component';
 import { LoginComponent } from './components/login/login.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SatelliteComponent } from './components/satellite/satellite.component';
 import { SatellitesListComponent } from './components/satellites-list/satellites-list.component';
 import { AuthGuard } from './services/auth.guard';
@@ -61,6 +62,10 @@ const routes: Routes = [
     path: "login",
     component: LoginComponent
   },
+  {
+    path: "**",
+    component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({

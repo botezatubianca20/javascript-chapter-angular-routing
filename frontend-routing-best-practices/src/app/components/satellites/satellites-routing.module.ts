@@ -20,6 +20,9 @@ const routes: Routes = [
     component: SatelliteComponent,
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
+    resolve: {
+      satellite: SatelliteResolver
+    },
     children: [
       {
         path: "",
@@ -37,9 +40,6 @@ const routes: Routes = [
       }
 
     ],
-    resolve: { // before displaying the SatelliteResolver we need to first fetch a satellite property using a resolver
-      satellite: SatelliteResolver
-    }
   }
 
 ];
